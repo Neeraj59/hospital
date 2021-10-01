@@ -1,0 +1,35 @@
+{% extends 'navigation.html' %}
+  {% load static %}
+{%  block body %}
+<style>
+  .mydivstyle:hover{
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0,0.3);
+  transform: translateY(-20px);
+}
+</style>
+<div class="container" style="margin-top:50px">
+<h2 class="text-center">Admin Dashboard</h2>
+<br><br><br><br>
+<div class="row">
+<div class="col-sm-4 text-center mydivstyle">
+  <h2 style="color: green">{{d}}</h2>
+  <img src="{% static 'images/doctor.png' %}" width="300" height="200" class="img-responsive" > 
+  <a href="{% url 'view_doctor' %}"><h4 style="color: rgb(87, 7, 87);">Doctor</h4><hr class="rounded"></a>
+</div>
+
+<div class="col-sm-4 text-center mydivstyle">
+  <h2 style="color: green">{{p}}</h2>
+  <img src="{% static 'images/patient.png' %}" width="300" height="200" class="img-responsive" > 
+  <a href="{% url 'view_patient' %}"><h4 style="color: rgb(87, 7, 87);">Patient</h4><hr class="rounded"></a>
+</div>
+
+<div class="col-sm-4 text-center mydivstyle">
+  <h2 style="color: green">{{a}}</h2>
+  <img src="{% static 'images/Appointment.png' %}" width="300" height="200" class="img-responsive" > 
+  <a href="{% url 'view_appointment' %}"><h4 style="color: rgb(87, 7, 87);">Appointment</h4><hr class="rounded"></a>
+</div>
+
+</div>
+
+</div>
+{% endblock %}
